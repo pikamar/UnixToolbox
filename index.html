@@ -1997,6 +1997,8 @@ A new project, that is a directory with some files, is imported into the reposit
 # svn ls http://host.url/svn/project1/tags/     <span class="cmt"> # List all tags</span>
 # svn move foo.c bar.c                          <span class="cmt"> # Move (rename) files</span>
 # svn delete some_old_file                      <span class="cmt"> # Delete files</span>
+# svn update                                    <span class="cmt"> # Update to the latest revision</span>
+# svn merge -r 150:140 .                        <span class="cmt"> # Revert from current(latest) revision 150 to 140. Do the commit after this</span>
 </pre>
 
 </div>
