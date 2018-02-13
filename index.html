@@ -165,6 +165,9 @@ The following commands are useful to find out what is going on on the system.
 # pw groupmod admin -m newmember     <span class="cmt"># Add a new member to a group</span>
 # pw useradd colin -c "Colin Barschel" -g admin -m -s /bin/tcsh 
 # pw userdel colin; pw groupdel admin
+# vi /etc/security/pwquality.conf    <span class="cmt"># To edit password policy</span>
+# chage -l admin                     <span class="cmt"># To list current account aging type</span>
+# chage -I -1 -m 0 -M 99999 -E -1 admin      <span class="cmt"># To disable password aging / expiration for user admin</span>
 </pre>
 Encrypted passwords are stored in /etc/shadow for Linux and Solaris and /etc/master.passwd on FreeBSD. If the master.passwd is modified manually (say to delete a password), run <code># pwd_mkdb -p master.passwd</code> to rebuild the database.<br /><br />
 To temporarily prevent logins system wide (for all users but root) use nologin. The message in nologin will be displayed (might not work with ssh pre-shared keys).
